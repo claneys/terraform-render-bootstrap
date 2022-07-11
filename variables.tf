@@ -15,6 +15,18 @@ variable "etcd_servers" {
 
 # optional
 
+variable "kv_version" {
+  type        = string
+  description = "kube-vip version"
+  default     = "v.0.4.4"
+}
+
+variable "kv_interface" {
+  type        = string
+  description = "Set the INTERFACE name to the name of the interface on the control plane(s) which will announce the VIP. In many Linux distributions this can be found with the 'ip a' command."
+  default     = "eno1"
+}
+
 variable "networking" {
   type        = string
   description = "Choice of networking provider (flannel or calico or cilium)"
