@@ -34,7 +34,7 @@ spec:
     - name: vip_retryperiod
       value: "1"
     - name: address
-      value: ${api_servers[0]}
+      value: ${kv_vip}
     image: ghcr.io/kube-vip/kube-vip:${kv_version}
     imagePullPolicy: Always
     name: kube-vip

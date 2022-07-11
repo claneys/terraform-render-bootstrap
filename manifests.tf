@@ -10,6 +10,7 @@ locals {
         kube_controller_manager_image = var.container_images["kube_controller_manager"]
         kube_scheduler_image          = var.container_images["kube_scheduler"]
 
+	kv_vip            = var.api_servers[0]
         kv_version        = var.kv_version
         kv_interface      = var.kv_interface
         etcd_servers      = join(",", formatlist("https://%s:2379", var.etcd_servers))
